@@ -92,6 +92,7 @@ public class PawnboxInventoryObject extends StorageBoxInventoryObject {
                 final InventoryItem inventoryItem = inventory.getItem(slot);
                 if (inventoryItem == null || inventoryItem.item == null) continue;
                 if (inventoryItem.item.getStringID().equals("coin")) continue;
+                if (inventoryItem.item.getStringID().equals("coinpouch")) continue;
 
                 final float brokerValue = inventoryItem.item.getBrokerValue(inventoryItem);
                 if (brokerValue * amount < 1) continue;
